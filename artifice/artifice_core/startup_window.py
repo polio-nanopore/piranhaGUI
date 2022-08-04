@@ -62,8 +62,10 @@ def setup_layout(theme='Dark', version='ARTIFICE', font = None, scale = 1):
     poseqco_scaled = scale_image('poseqco_logo_cropped.png',scale,(150,68))
     if is_piranhaGUI:
         main_logo_scaled = scale_image('piranha.png',scale,(150,150))
+        image_info_text = 'An internet connection and a Docker install is required to install RAMPART and PIRANHA images'
     else:
         main_logo_scaled = scale_image('a_logo.png',scale,(100,120))
+        image_info_text = 'An internet connection and a Docker install is required to install RAMPART image'
 
     logo_column = [
         [sg.Image(source = poseqco_scaled, visible=is_piranhaGUI)],
@@ -72,7 +74,7 @@ def setup_layout(theme='Dark', version='ARTIFICE', font = None, scale = 1):
 
     install_buttons_size = (480,36)
     info_column = [
-    [sg.Text(translate_text('An internet connection and a Docker install is required to install RAMPART and PIRANHA images',language,translate_scheme))],
+    [sg.Text(translate_text(image_info_text,language,translate_scheme))],
     [
     sg.Text(docker_status,size=(30,1),text_color=docker_text_color, key='-DOCKER STATUS-'),
     AltButton(button_text=translate_text('Open Docker Site in Browser',language,translate_scheme),font=font,size=install_buttons_size,key='-DOCKER INSTALL-', visible=not docker_installed),
