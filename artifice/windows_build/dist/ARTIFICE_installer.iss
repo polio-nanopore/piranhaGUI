@@ -4,7 +4,7 @@
 
 [Setup]
 AppName=ARTIFICE
-AppVersion=1.3.1
+AppVersion=1.3.2
 WizardStyle=modern
 DefaultDirName={autopf}\ARTIFICE
 DefaultGroupName=ARTIFICE
@@ -12,7 +12,7 @@ UninstallDisplayIcon={app}\.exe
 Compression=lzma2
 SolidCompression=yes
 OutputDir=.\installer
-OutputBaseFilename=ARTIFICEv1.3.1_installer_windows
+OutputBaseFilename=ARTIFICEv1.3.2_installer_windows
 
 [Tasks]
 Name: desktopicon; Description: "Create a &desktop icon";
