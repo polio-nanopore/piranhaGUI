@@ -149,7 +149,7 @@ def get_resource(filepath):
 
 #   NOTE THIS SHOULD BE UPDATED WITH EACH NEW MAJOR PACKAGE RELEASE (assuming it's compatible with the latest artifice version)
 COMPATIBLE_VERSIONS = {
-    'polionanopore/piranha':1.5
+    'polionanopore/piranha':1.6
     }
 
 APPLICATION_HEADER = 'Powered by ARTIFICE | ARTICnetwork: http://artic.network'
