@@ -20,6 +20,7 @@ On startup you will see a window that will tell you the status of the software p
 
 This is what the window is like if everything is ready to run. PiranhaGUI releases are packaged with the latest Piranha release which should install automatically when you first start the application, as long as Docker is in installed. However if Piranha or Docker is missing you may see one or more of the lines in red:
 
+
 <img src="./docs/startup_window_not_installed.png">
 
 In this case it is saying that the `Piranha` sofware is not yet installed. Click the button to install it. Note that this may take some time depending on the internet connection (the download at the time of writing is 800MB). It is downloaded and installed into `Docker`.
