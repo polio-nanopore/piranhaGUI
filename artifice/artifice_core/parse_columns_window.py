@@ -13,7 +13,7 @@ from artifice_core.window_functions import error_popup
 from artifice_core.manage_runs import samples_to_list, set_default_columns, save_barcodes
 
 def setup_panel(samples, run_info = None, barcodes_column = 0, samples_column = 1, has_headers = True):
-    sg.theme('PANEL')
+    sg.theme("PANEL")
     translator = setup_translator()
 
     theme=consts.THEMES[sg.theme()]
