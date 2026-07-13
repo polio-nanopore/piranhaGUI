@@ -61,7 +61,7 @@ def make_themes():
         'PANEL': {'BACKGROUND': CREAM,
                 'TEXT': DARK_BLUE,
                 'INPUT': CREAM,
-                'TEXT_INPUT': NEAR_BLACK, 
+                'TEXT_INPUT': NEAR_BLACK,
                 'CONSOLE_TEXT': YELLOW,
                 'CONSOLE_BACKGROUND': NEAR_BLACK,
                 'SCROLL': GREY,
