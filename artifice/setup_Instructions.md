@@ -1,4 +1,4 @@
-### Running from terminal ###
+cd### Running from terminal ###
 These instructions assume you have installed conda and docker installed before you proceed.
 Instructions for installing conda: https://conda.io/projects/conda/en/latest/user-guide/install/index.html
 Instructions for installing docker: https://docs.docker.com/engine/install/

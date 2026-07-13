@@ -32,7 +32,6 @@ RED = '#d97168'
 LIGHTER_RED = '#F48379'
 LIGHTER_BLUE = '#328E9A'
 YELLOW = '#FFBF00'
-
 #create artifice theme
 def make_themes():
 
