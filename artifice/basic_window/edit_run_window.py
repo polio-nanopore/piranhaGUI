@@ -96,6 +96,7 @@ def setup_panel(translator):
                 sg.Sizer(1,y2),
                 sg.In(enable_events=True,expand_y=True, key='-MINKNOW-',font=consts.CONSOLE_FONT, 
                     pad=(0,12), disabled_readonly_background_color='#393938', expand_x=True,
+                    text_color='#F5F1DF',
                     disabled_readonly_text_color='#F5F1DF', readonly=True, justification="left"),
                 #sg.Text(size=35, enable_events=True, expand_y=True, key='-MINKNOW-',font=artifice_core.consts.CONSOLE_FONT, pad=(0,12), background_color='#393938', text_color='#F5F1DF', justification="Right"),
                 AltFolderBrowse(button_text=translator('Select')),
