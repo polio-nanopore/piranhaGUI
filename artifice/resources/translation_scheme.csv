@@ -123,7 +123,7 @@ Sample name of negative control. Default: `negative`,Nom de l'échantillons du c
 Analysis Mode:,Mode d'analyse
 Medaka Model:,Modele de Medaka
 Specify analysis mode to run. Options: `vp1`. Default: `vp1`,Preciser le mode d'analyse.  Choix: `vp1`. Défaut: `vp1`
-Medaka model to run analysis using. Default: r941_min_hac_variant_g507,Modele de Medaka d'exécution de l'analyse. Défaut: r941_min_hac_variant_g507
+Medaka model to run analysis using. Default: AUTO,Modele de Medaka d'exécution de l'analyse. Défaut: AUTO
 Minimum mapping quality. Default: 50,Qualité de mappage minimale. Défaut: 50
 Minimum read length. Default: 1000,Longeur de lecture minimale. Défaut: 1000
 Maximum read length. Default: 1300,Longeur de lecture maximale. Défaut: 1300

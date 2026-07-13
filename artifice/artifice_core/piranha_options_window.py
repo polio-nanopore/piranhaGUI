@@ -9,6 +9,7 @@ from artifice_core.update_log import log_event, update_log
 from artifice_core.window_functions import error_popup
 from artifice_core.manage_runs import save_run, save_changes, load_run
 
+
 def setup_panel():
     sg.theme("PANEL")
 
@@ -18,12 +19,12 @@ def setup_panel():
     tooltips = {
         '-REFERENCE SEQUENCES-':translator('Custom reference sequences file.'),
         '-ANALYSIS MODE-':translator('Specify analysis mode to run. Options: `vp1`. Default: `vp1`'),
-        '-MEDAKA MODEL-':translator('Medaka model to run analysis using. Default: r941_min_hac_variant_g507'),
+        '-MEDAKA MODEL-':translator('Medaka model to run analysis using. Default: AUTO'),
         '-MIN MAP QUALITY-':translator('Minimum mapping quality. Default: 50'),
         '-MIN READ LENGTH-':translator('Minimum read length. Default: 1000'),
         '-MAX READ LENGTH-':translator('Maximum read length. Default: 1300'),
-        '-MIN READ DEPTH-':translator('Minimum read depth required for consensus generation. Default: 50'),
-        '-MIN READ PCENT-':translator('Minimum percentage of sample required for consensus generation. Default: 10'),
+        '-MIN READ DEPTH-':translator('Minimum read depth required for consensus generation.'),
+        '-MIN READ PCENT-':translator('Minimum percentage of sample required for consensus generation.'),
         '-PRIMER LENGTH-':translator('Length of primer sequences to trim off start and end of reads. Default: 30'),
         '-PUBLISH DIR-':translator('Output publish directory. Default: `analysis-2022-XX-YY`'),
         '-OUTPUT PREFIX-':translator('Prefix of output directory & report name: Default: `analysis`'),
