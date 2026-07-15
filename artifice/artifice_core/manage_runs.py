@@ -413,8 +413,9 @@ def set_default_columns(column_headers, run_info, barcodes_column = None, sample
     # sets the columns if no match found
     if barcodes_column == None:
         if samples_column == None:
-            barcodes_column = 0
-            samples_column = 1
+            # keep backup defaults but the template order is sample, barcode, ...
+            barcodes_column = 1
+            samples_column = 0
             return barcodes_column, samples_column
         elif samples_column > 0:
             barcodes_column = samples_column - 1
@@ -432,8 +433,14 @@ def set_default_columns(column_headers, run_info, barcodes_column = None, sample
 
 def make_barcodes_list(run_info):
 
+    # setting has_headers to false here populates column_headers with indexes
+    # set_default_columns() then never matches if you call it with column_headers and returns the default indexes (which were the wrong way around)
+    # the only exception is if run_info.json already has column indices saved
+    # since setting has_headers True seems to create further issues when it writes the barcode.csv (overwrites rows with header) 
+    # we can just pass samples_list[0] to set_default_columns instead 
     samples_list, column_headers = samples_to_list(run_info['samples'], has_headers=False)
-    barcodes_column, samples_column = set_default_columns(column_headers, run_info)
+    
+    barcodes_column, samples_column = set_default_columns(samples_list[0], run_info)
 
 
     if 'samples_column' in run_info:
@@ -460,7 +467,7 @@ def make_barcodes_list(run_info):
         #old_row = list(set(row) - set(new_row))
         new_row = new_row + row
         barcodes_list.append(new_row)
-    
+
     barcodes_list[0][0] = 'sample'
     barcodes_list[0][1] = 'barcode'
 
