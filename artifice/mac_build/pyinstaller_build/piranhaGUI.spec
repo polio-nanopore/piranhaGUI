@@ -26,7 +26,7 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name='piranhaGUIv1.6.12',
+    name='piranhaGUIv1.6.13',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -51,7 +51,7 @@ coll = COLLECT(
 )
 app = BUNDLE(
     coll,
-    name='piranhaGUIv1.6.12.app',
+    name='piranhaGUIv1.6.13.app',
     icon='../../resources/piranha_resized.icns',
     bundle_identifier=None,
 )
