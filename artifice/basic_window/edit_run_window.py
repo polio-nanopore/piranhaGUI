@@ -226,7 +226,9 @@ def run_edit_window(window, run_info, selected_run_title, reset_run = True):
                       '-NOTES-':['--notes', 'notes', 'Notes', 'note', 'Note']}
     
     try:
-        event, values = window.read()
+        # adding timeout here to fix bug causing users to have to select the samples sheet twice
+        # timeout turns window.read into a non-blocking read by returning immediately
+        event, values = window.read(timeout=0)
         run_info = load_run(window, selected_run_title, element_dict, runs_dir = config['RUNS_DIR'], 
                             update_archive_button=False)
         
